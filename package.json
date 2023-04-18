@@ -1,0 +1,23 @@
+{
+  "name": "crash-course",
+  "version": "1.0.0",
+  "description": "",
+  "main": "global.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kinyuajoe4/Wolf.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kinyuajoe4/Wolf/issues"
+  },
+  "homepage": "https://github.com/kinyuajoe4/Wolf#readme"
+}

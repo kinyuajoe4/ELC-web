@@ -5,3 +5,4 @@ console.log(people);
 module.exports= {
     people,ages
 };
+
