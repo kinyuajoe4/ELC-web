@@ -1,8 +1,10 @@
 const http=require ('http');
 const fs=require('fs');
+const load =require('lodash');
 const server= http.createServer((req,res)=>{
-    console.log(req.url,req.method);
-
+    // console.log(req.url,req.method); to display on terminal
+const num=load.random(0,20);
+console.log(num);
     // set header content type
     res.setHeader('Content-type','text/html');
 let path = './docs';
