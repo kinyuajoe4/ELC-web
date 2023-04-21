@@ -1,23 +1,11 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Write a Blog - Maji</title>
-    <link rel="stylesheet" href="style.css">
-  </head>
+  <%- include ('/home/jose/Documents/Tuts/node-crash-course/partials/head.ejs') %>
   <body>
     <header>
-      <nav>
-        <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="products.html">Products</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="/about">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
+      <%- include ('/home/jose/Documents/Tuts/node-crash-course/partials/nav.ejs') %>
       <h1>Write a Blog</h1>
-      <p>Share your thoughts and experiences in the water industry.</p>
+      <p>Share your thoughts and experiences in the water industry.<%= title %></p>
     </header>
     <main>
       <form action="submit.php" method="post">
@@ -29,9 +17,8 @@
         <textarea id="content" name="content" rows="10" cols="50" required></textarea><br><br>
         <input type="submit" value="Submit">
       </form>
+      <h1>available blogs</h1>
     </main>
-    <footer>
-      <p>&copy; 2023 Maji. All rights reserved.</p>
-    </footer>
+    <%- include ('/home/jose/Documents/Tuts/node-crash-course/partials/footer.ejs') %>
   </body>
 </html>

@@ -1,21 +1,9 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>About Maji - Your Trusted Water Company</title>
-    <link rel="stylesheet" href="style.css">
-  </head>
+  <%- include ('/home/jose/Documents/Tuts/node-crash-course/partials/head.ejs') %>
   <body>
     <header>
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="products.html">Products</a></li>
-          <li><a href="/blog/create">Services</a></li>
-          <li><a href="/about">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
+     <%- include ('/home/jose/Documents/Tuts/node-crash-course/partials/nav.ejs') %>
       <h1>Maji</h1>
       <p>Your Trusted Water Company</p>
     </header>
@@ -31,10 +19,16 @@
       <section>
         <h2>Our Team</h2>
         <p>Our team is made up of experts in water treatment, distribution, and customer service. We are passionate about what we do, and we take pride in providing our customers with the best possible experience. Meet our team <a href="team.html">here</a>.</p>
+      <% if (blogs.length>0){ %>
+        <%blogs.forEach(blog=>{%>
+          <h3><class = 'Tittle'><%= blog.title %></h3>
+       <P><class = 'Snippets'><%= blog.snippet %></p>
+      <%})%>
+     <% } %>
+
+
       </section>
     </main>
-    <footer>
-      <p>&copy; 2023 Maji. All rights reserved.</p>
-    </footer>
+    <%- include ('/home/jose/Documents/Tuts/node-crash-course/partials/footer.ejs') %>
   </body>
 </html>
