@@ -1,11 +1,22 @@
 const express= require('express');
 const app= express();//setting up an express app by invoking 
-
+const morgan= require('morgan');
+const mongoose= require('mongoose');
+const { result } = require('lodash');
+//connect to mongo
+ const dbURI='mongodb+srv://jose:abcd1234@cluster0.yd9x8fe.mongodb.net/mongofirst';
+ mongoose.connect(dbURI)
+ .then((result)=>{
+    console.log('connected to db');
+ });
 //register view engine
 app.set('view engine','ejs');
 
 //listen for requests
 app.listen(3000);
+//set the middleware
+app.use(morgan('dev'));
+
 app.get('/',(req,res)=>{
     const blogs=[
      { title:'JOSEE' , snippet:'asdfgh'},
